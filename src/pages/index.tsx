@@ -1,9 +1,8 @@
 // pages/index.tsx
 import { trpc } from "@/utils/trpc";
-import { VideoGame } from "@/types/VideoGame";
 
 const Home = () => {
-  const { data, isLoading } = trpc.hello.useQuery({text:"Client !!!"});
+  const { data } = trpc.hello.useQuery({text:"Client !!!"});
   const videoGames = trpc.getAllVideoGames.useQuery();
   const logToServer = trpc.logToServer.useMutation();
   

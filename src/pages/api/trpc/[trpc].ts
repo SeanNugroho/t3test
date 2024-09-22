@@ -1,7 +1,6 @@
 import { initTRPC } from '@trpc/server';
 import { PrismaClient } from '@prisma/client';
 import { createNextApiHandler } from '@trpc/server/adapters/next';
-import { text } from 'stream/consumers';
 import { z } from 'zod';
 
 // Initialize tRPC
