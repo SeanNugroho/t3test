@@ -1,0 +1,14 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model video_games {
+  id         Int      @id @default(autoincrement())
+  title      String?  @db.VarChar(255)
+  high_score Decimal? @db.Decimal(5, 2)
+}
